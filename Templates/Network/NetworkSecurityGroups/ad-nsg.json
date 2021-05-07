@@ -1,0 +1,273 @@
+{
+  "name": "",
+  "location": "",
+  "resource_group_name": "",
+  "tags": {
+  },
+  "security_rule": [
+    {
+      "name": "Allow_LOCAL_SUBNET_INBOUND",
+      "priority": 110,
+      "direction": "Inbound",
+      "access": "Allow",
+      "protocol": "*",
+      "source_port_range": "*",
+      "destination_port_range": "*",
+      "source_address_prefix": "LOCALCIDR",
+      "destination_address_prefix": "LOCALCIDR"
+    },
+    {
+      "name": "Allow_AZURE_LB_INBOUND",
+      "priority": 111,
+      "direction": "Inbound",
+      "access": "Allow",
+      "protocol": "*",
+      "source_port_range": "*",
+      "destination_port_range": "*",
+      "source_address_prefix": "AzureLoadBalancer",
+      "destination_address_prefix": "LOCALCIDR"
+    },
+    {
+      "name": "Allow_RACK_BASTION_RDP_INBOUND",
+      "priority": 112,
+      "direction": "Inbound",
+      "access": "Allow",
+      "protocol": "Tcp",
+      "source_port_range": "*",
+      "destination_port_range": "3389",
+      "source_address_prefix": "BASTCIDR",
+      "destination_address_prefix": "LOCALCIDR"
+    },
+    {
+      "name": "Allow_RACK_BASTION_SSH_INBOUND",
+      "priority": 113,
+      "direction": "Inbound",
+      "access": "Allow",
+      "protocol": "Tcp",
+      "source_port_range": "*",
+      "destination_port_range": "22",
+      "source_address_prefix": "BASTCIDR",
+      "destination_address_prefix": "LOCALCIDR"
+    },
+    {
+      "name": "Allow_RACK_BASTION_SFTBROKER_INBOUND",
+      "priority": 114,
+      "direction": "Inbound",
+      "access": "Allow",
+      "protocol": "Tcp",
+      "source_port_range": "*",
+      "destination_port_range": "4421",
+      "source_address_prefix": "BASTCIDR",
+      "destination_address_prefix": "LOCALCIDR"
+    },
+    {
+      "name": "Allow_TCP_UDP_53",
+      "priority": 115,
+      "direction": "Inbound",
+      "access": "Allow",
+      "protocol": "*",
+      "source_port_range": "*",
+      "destination_port_range": "53",
+      "source_address_prefix": "VirtualNetwork",
+      "destination_address_prefix": "LOCALCIDR"
+    },
+    {
+      "name": "Allow_TCP_UDP_88",
+      "priority": 116,
+      "direction": "Inbound",
+      "access": "Allow",
+      "protocol": "*",
+      "source_port_range": "*",
+      "destination_port_range": "88",
+      "source_address_prefix": "VirtualNetwork",
+      "destination_address_prefix": "LOCALCIDR"
+    },
+    {
+      "name": "Allow_UDP_123",
+      "priority": 117,
+      "direction": "Inbound",
+      "access": "Allow",
+      "protocol": "Udp",
+      "source_port_range": "*",
+      "destination_port_range": "123",
+      "source_address_prefix": "VirtualNetwork",
+      "destination_address_prefix": "LOCALCIDR"
+    },
+    {
+      "name": "Allow_TCP_135",
+      "priority": 118,
+      "direction": "Inbound",
+      "access": "Allow",
+      "protocol": "Tcp",
+      "source_port_range": "*",
+      "destination_port_range": "135",
+      "source_address_prefix": "VirtualNetwork",
+      "destination_address_prefix": "LOCALCIDR"
+    },
+    {
+      "name": "Allow_TCP_UDP_137",
+      "priority": 119,
+      "direction": "Inbound",
+      "access": "Allow",
+      "protocol": "*",
+      "source_port_range": "*",
+      "destination_port_range": "137",
+      "source_address_prefix": "VirtualNetwork",
+      "destination_address_prefix": "LOCALCIDR"
+    },
+    {
+      "name": "Allow_UDP_138",
+      "priority": 120,
+      "direction": "Inbound",
+      "access": "Allow",
+      "protocol": "Udp",
+      "source_port_range": "*",
+      "destination_port_range": "138",
+      "source_address_prefix": "VirtualNetwork",
+      "destination_address_prefix": "LOCALCIDR"
+    },
+    {
+      "name": "Allow_TCP_139",
+      "priority": 121,
+      "direction": "Inbound",
+      "access": "Allow",
+      "protocol": "Tcp",
+      "source_port_range": "*",
+      "destination_port_range": "139",
+      "source_address_prefix": "VirtualNetwork",
+      "destination_address_prefix": "LOCALCIDR"
+    },
+    {
+      "name": "Allow_TCP_UDP_389",
+      "priority": 122,
+      "direction": "Inbound",
+      "access": "Allow",
+      "protocol": "*",
+      "source_port_range": "*",
+      "destination_port_range": "389",
+      "source_address_prefix": "VirtualNetwork",
+      "destination_address_prefix": "LOCALCIDR"
+    },
+    {
+      "name": "Allow_TCP_UDP_445",
+      "priority": 123,
+      "direction": "Inbound",
+      "access": "Allow",
+      "protocol": "*",
+      "source_port_range": "*",
+      "destination_port_range": "445",
+      "source_address_prefix": "VirtualNetwork",
+      "destination_address_prefix": "LOCALCIDR"
+    },
+    {
+      "name": "Allow_TCP_UDP_464",
+      "priority": 124,
+      "direction": "Inbound",
+      "access": "Allow",
+      "protocol": "*",
+      "source_port_range": "*",
+      "destination_port_range": "464",
+      "source_address_prefix": "VirtualNetwork",
+      "destination_address_prefix": "LOCALCIDR"
+    },
+    {
+      "name": "Allow_TCP_UDP_636",
+      "priority": 125,
+      "direction": "Inbound",
+      "access": "Allow",
+      "protocol": "*",
+      "source_port_range": "*",
+      "destination_port_range": "636",
+      "source_address_prefix": "VirtualNetwork",
+      "destination_address_prefix": "LOCALCIDR"
+    },
+    {
+      "name": "Allow_TCP_3268",
+      "priority": 126,
+      "direction": "Inbound",
+      "access": "Allow",
+      "protocol": "Tcp",
+      "source_port_range": "*",
+      "destination_port_range": "3268",
+      "source_address_prefix": "VirtualNetwork",
+      "destination_address_prefix": "LOCALCIDR"
+    },
+    {
+      "name": "Allow_TCP_3269",
+      "priority": 127,
+      "direction": "Inbound",
+      "access": "Allow",
+      "protocol": "Tcp",
+      "source_port_range": "*",
+      "destination_port_range": "3269",
+      "source_address_prefix": "VirtualNetwork",
+      "destination_address_prefix": "LOCALCIDR"
+    },
+    {
+      "name": "Allow_TCP_5722",
+      "priority": 128,
+      "direction": "Inbound",
+      "access": "Allow",
+      "protocol": "Tcp",
+      "source_port_range": "*",
+      "destination_port_range": "5722",
+      "source_address_prefix": "VirtualNetwork",
+      "destination_address_prefix": "LOCALCIDR"
+    },
+    {
+      "name": "Allow_TCP_UDP_49152_65535",
+      "priority": 129,
+      "direction": "Inbound",
+      "access": "Allow",
+      "protocol": "*",
+      "source_port_range": "*",
+      "destination_port_range": "49152-65535",
+      "source_address_prefix": "VirtualNetwork",
+      "destination_address_prefix": "LOCALCIDR"
+    },
+    {
+      "name": "Allow_TCP_9389",
+      "priority": 130,
+      "direction": "Inbound",
+      "access": "Allow",
+      "protocol": "Tcp",
+      "source_port_range": "*",
+      "destination_port_range": "9389",
+      "source_address_prefix": "VirtualNetwork",
+      "destination_address_prefix": "LOCALCIDR"
+    },
+    {
+      "name": "Allow_WinRM_5985",
+      "priority": 131,
+      "direction": "Inbound",
+      "access": "Allow",
+      "protocol": "Tcp",
+      "source_port_range": "*",
+      "destination_port_range": "5985",
+      "source_address_prefix": "VirtualNetwork",
+      "destination_address_prefix": "LOCALCIDR"
+    },
+    {
+      "name": "Deny_ALL_INBOUND_UDP",
+      "priority": 4000,
+      "direction": "Inbound",
+      "access": "Deny",
+      "protocol": "Udp",
+      "source_port_range": "*",
+      "destination_port_range": "*",
+      "source_address_prefix": "*",
+      "destination_address_prefix": "*"
+    },
+    {
+      "name": "Deny_ALL_INBOUND_TCP",
+      "priority": 4001,
+      "direction": "Inbound",
+      "access": "Deny",
+      "protocol": "Tcp",
+      "source_port_range": "*",
+      "destination_port_range": "*",
+      "source_address_prefix": "*",
+      "destination_address_prefix": "*"
+    }
+  ]
+}

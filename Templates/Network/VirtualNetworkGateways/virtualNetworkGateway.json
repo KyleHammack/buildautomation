@@ -1,0 +1,16 @@
+{
+  "name": "",
+  "resource_group_name": "",
+  "location": "",
+  "type": "",
+  "vpn_type": "",
+  "sku": "",
+  "ip_configuration": {
+    "name": "vnetGatewayConfig",
+    "public_ip_address_id": "",
+    "private_ip_address_allocation": "Dynamic",
+    "subnet_id": ""
+  },
+  "tags": {
+  }
+}

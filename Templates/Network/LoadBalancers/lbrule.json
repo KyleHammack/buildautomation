@@ -1,0 +1,14 @@
+{
+  "name": "",
+  "resource_group_name": "",
+  "loadbalancer_id": "",
+  "frontend_ip_configuration_name": "",
+  "protocol": "Tcp",
+  "frontend_port": 80,
+  "backend_port": 80,
+  "backend_address_pool_id": "",
+  "probe_id": "",
+  "enable_floating_ip": false,
+  "idle_timeout_in_minutes": 4,
+  "load_distribution": "Default"
+}

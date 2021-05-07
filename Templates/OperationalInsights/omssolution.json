@@ -1,0 +1,11 @@
+{
+  "solution_name": "",
+  "location": "",
+  "resource_group_name": "",
+  "workspace_resource_id": "",
+  "workspace_name": "",
+  "plan":{
+    "publisher": "Microsoft",
+    "product": "OMSGallery/Updates"
+  }
+}

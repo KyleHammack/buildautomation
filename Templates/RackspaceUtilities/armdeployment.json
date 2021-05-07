@@ -1,0 +1,8 @@
+{
+  "name": "",
+  "resource_group_name": "",
+  "deployment_mode": "Incremental",
+  "template_body": "",
+  "parameters": {
+  }
+}

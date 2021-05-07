@@ -1,0 +1,36 @@
+{
+  "name": "",
+  "location": "",
+  "resource_group_name": "",
+  "network_interface_ids": [
+
+  ],
+  "availability_set_id": "",
+  "vm_size": "",
+  "storage_image_reference": {
+    "publisher": "MicrosoftWindowsServer",
+    "offer": "WindowsServer",
+    "sku": "2016-Datacenter",
+    "version": "latest"
+  },
+  "storage_os_disk": {
+    "name": "",
+    "caching": "ReadWrite",
+    "create_option": "FromImage",
+    "managed_disk_type": "Premium_LRS"
+  },
+  "os_profile": {
+    "computer_name": "",
+    "admin_username": "",
+    "admin_password": "${var.adminPassword}"
+  },
+  "boot_diagnostics": {
+    "enabled": "true",
+    "storage_uri": ""
+  },
+  "storage_data_disk": [
+    
+  ],
+  "tags": {
+  }
+}

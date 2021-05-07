@@ -1,0 +1,22 @@
+{
+  "name": "",
+  "location": "",
+  "resource_group_name": "",
+  "version": "5.7",
+  "ssl_enforcement": "Disabled",
+  "administrator_login": "",
+  "administrator_login_password": "${var.sqladminPassword}",
+  "sku": {
+    "name": "",
+    "capacity": 2,
+    "tier": "",
+    "family": "Gen5"
+  },
+  "storage_profile": {
+    "storage_mb": 5120,
+    "backup_retention_days": 7,
+    "geo_redundant_backup": "Disabled"
+  },
+  "tags": {
+  }
+}

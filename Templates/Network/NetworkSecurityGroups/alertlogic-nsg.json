@@ -1,0 +1,174 @@
+{
+  "name": "",
+  "location": "",
+  "resource_group_name": "",
+  "tags": {
+  },
+  "security_rule": [
+    {
+      "name": "Allow_LOCAL_SUBNET_INBOUND",
+      "priority": 110,
+      "direction": "Inbound",
+      "access": "Allow",
+      "protocol": "*",
+      "source_port_range": "*",
+      "destination_port_range": "*",
+      "source_address_prefix": "LOCALCIDR",
+      "destination_address_prefix": "LOCALCIDR"
+    },
+    {
+      "name": "Allow_AZURE_LB_INBOUND",
+      "priority": 111,
+      "direction": "Inbound",
+      "access": "Allow",
+      "protocol": "*",
+      "source_port_range": "*",
+      "destination_port_range": "*",
+      "source_address_prefix": "AzureLoadBalancer",
+      "destination_address_prefix": "LOCALCIDR"
+    },
+    {
+      "name": "Allow_RACK_BASTION_RDP_INBOUND",
+      "priority": 112,
+      "direction": "Inbound",
+      "access": "Allow",
+      "protocol": "Tcp",
+      "source_port_range": "*",
+      "destination_port_range": "3389",
+      "source_address_prefix": "BASTCIDR",
+      "destination_address_prefix": "LOCALCIDR"
+    },
+    {
+      "name": "Allow_RACK_BASTION_SSH_INBOUND",
+      "priority": 113,
+      "direction": "Inbound",
+      "access": "Allow",
+      "protocol": "Tcp",
+      "source_port_range": "*",
+      "destination_port_range": "22",
+      "source_address_prefix": "BASTCIDR",
+      "destination_address_prefix": "LOCALCIDR"
+    },
+    {
+      "name": "Allow_RACK_BASTION_SFTBROKER_INBOUND",
+      "priority": 114,
+      "direction": "Inbound",
+      "access": "Allow",
+      "protocol": "Tcp",
+      "source_port_range": "*",
+      "destination_port_range": "4421",
+      "source_address_prefix": "BASTCIDR",
+      "destination_address_prefix": "LOCALCIDR"
+    },
+    {
+      "name": "Allow_VNET_TO_ALT_7777_INBOUND",
+      "priority": 136,
+      "direction": "Inbound",
+      "access": "Allow",
+      "protocol": "Tcp",
+      "source_port_range": "*",
+      "destination_port_range": "7777",
+      "source_address_prefix": "BASTCIDR",
+      "destination_address_prefix": "LOCALCIDR"
+    },
+    {
+      "name": "Allow_VNET_TO_ALT_443_INBOUND",
+      "priority": 137,
+      "direction": "Inbound",
+      "access": "Allow",
+      "protocol": "Tcp",
+      "source_port_range": "*",
+      "destination_port_range": "443",
+      "source_address_prefix": "BASTCIDR",
+      "destination_address_prefix": "LOCALCIDR"
+    },
+    {
+      "name": "ssh-rule-1",
+      "priority": 3994,
+      "direction": "Inbound",
+      "access": "Allow",
+      "protocol": "Tcp",
+      "source_port_range": "*",
+      "destination_port_range": "22",
+      "source_address_prefix": "204.110.218.96/27",
+      "destination_address_prefix": "LOCALCIDR"
+    },
+    {
+      "name": "ssh-rule-2",
+      "priority": 3995,
+      "direction": "Inbound",
+      "access": "Allow",
+      "protocol": "Tcp",
+      "source_port_range": "*",
+      "destination_port_range": "22",
+      "source_address_prefix": "204.110.219.96/27",
+      "destination_address_prefix": "LOCALCIDR"
+    },
+    {
+      "name": "ssh-rule-3",
+      "priority": 3996,
+      "direction": "Inbound",
+      "access": "Allow",
+      "protocol": "Tcp",
+      "source_port_range": "*",
+      "destination_port_range": "22",
+      "source_address_prefix": "208.71.209.32/27",
+      "destination_address_prefix": "LOCALCIDR"
+    },
+    {
+      "name": "pwaf-rule-1",
+      "priority": 3997,
+      "direction": "Inbound",
+      "access": "Allow",
+      "protocol": "Tcp",
+      "source_port_range": "*",
+      "destination_port_range": "4849",
+      "source_address_prefix": "204.110.218.96/27",
+      "destination_address_prefix": "LOCALCIDR"
+    },
+    {
+      "name": "pwaf-rule-2",
+      "priority": 3998,
+      "direction": "Inbound",
+      "access": "Allow",
+      "protocol": "Tcp",
+      "source_port_range": "*",
+      "destination_port_range": "4849",
+      "source_address_prefix": "204.110.219.96/27",
+      "destination_address_prefix": "LOCALCIDR"
+    },
+    {
+      "name": "pwaf-rule-3",
+      "priority": 3999,
+      "direction": "Inbound",
+      "access": "Allow",
+      "protocol": "Tcp",
+      "source_port_range": "*",
+      "destination_port_range": "4849",
+      "source_address_prefix": "208.71.209.32/27",
+      "destination_address_prefix": "LOCALCIDR"
+    },
+    {
+      "name": "Deny_ALL_INBOUND_UDP",
+      "priority": 4000,
+      "direction": "Inbound",
+      "access": "Deny",
+      "protocol": "Udp",
+      "source_port_range": "*",
+      "destination_port_range": "*",
+      "source_address_prefix": "*",
+      "destination_address_prefix": "*"
+    },
+    {
+      "name": "Deny_ALL_INBOUND_TCP",
+      "priority": 4001,
+      "direction": "Inbound",
+      "access": "Deny",
+      "protocol": "Tcp",
+      "source_port_range": "*",
+      "destination_port_range": "*",
+      "source_address_prefix": "*",
+      "destination_address_prefix": "*"
+    }
+  ]
+}

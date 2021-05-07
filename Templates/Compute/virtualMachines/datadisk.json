@@ -1,0 +1,8 @@
+{
+  "name": "",
+  "create_option": "Empty",
+  "caching": "None",
+  "managed_disk_type": "Standard_LRS",
+  "disk_size_gb": 128,
+  "lun": 1
+}

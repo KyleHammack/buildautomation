@@ -1,0 +1,42 @@
+{
+  "name": "",
+  "resource_group_name": "",
+  "location": "",
+  "sku": {
+    "name": "Standard_Medium",
+    "tier": "Standard",
+    "capacity": 2
+  },
+
+  "gateway_ip_configuration": {
+    "name": "ipconfig",
+    "subnet_id": ""
+  },
+
+  "frontend_port": [
+
+  ],
+
+  "frontend_ip_configuration": {
+    "name": "feconfig",
+    "public_ip_address_id": ""
+  },
+
+  "backend_address_pool": {
+    "name": "bepool"
+  },
+
+  "backend_http_settings": [
+
+  ],
+
+  "http_listener": [
+
+  ],
+
+  "request_routing_rule": [
+
+  ],
+  "tags": {
+  }
+}

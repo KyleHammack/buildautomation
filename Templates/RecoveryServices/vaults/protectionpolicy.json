@@ -1,0 +1,17 @@
+{
+  "name": "DailyVMBackup",
+  "resource_group_name": "",
+  "recovery_vault_name": "",
+  "timezone": "UTC",
+  "backup": {
+    "frequency": "Daily",
+    "time": "04:00"
+  },
+  "retention_daily":{
+    "count": 7
+  },
+  "retention_weekly": {
+    "count": 4,
+    "weekdays": ["Sunday"]
+  }  
+}

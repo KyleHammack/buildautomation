@@ -1,0 +1,12 @@
+{
+  "name": "",
+  "location": "",
+  "resource_group_name": "",
+  "family": "",
+  "sku_name": "",
+  "capacity": "",
+  "enable_non_ssl_port": false,
+  "redis_configuration": {},
+  "tags": {
+  }
+}

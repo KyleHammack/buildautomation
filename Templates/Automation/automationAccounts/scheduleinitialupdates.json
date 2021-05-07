@@ -1,0 +1,68 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "2019.06.01.0",
+  "parameters": {
+    "automationAccountName": {
+      "type": "string"
+    },
+    "startTime":{
+      "type":"string"
+    }
+  },
+  "variables": {
+    "ScheduleapiVersion": "2017-05-15-preview"
+  },
+  "resources": [
+    {
+      "apiVersion": "[variables('ScheduleapiVersion')]",
+      "location": "[resourceGroup().location]",
+      "name": "[concat(parameters('automationAccountName'),'/InitialUpdates')]",
+      "type": "Microsoft.Automation/automationAccounts/softwareUpdateConfigurations",
+      "properties": {
+        "updateConfiguration": {
+          "operatingSystem": "Windows",
+          "duration": "PT5H0M",
+          "windows": {
+            "excludedKbNumbers": [
+            ],
+            "includedUpdateClassifications": "Critical,Definition,FeaturePack,Security,ServicePack,Tools,Unclassified,UpdateRollup,Updates",
+            "rebootSetting": "Always"
+          },
+          "azureVirtualMachines": [
+          ],
+          "nonAzureComputerNames": [
+          ],
+          "targets": {
+            "azureQueries": [
+              {
+                "scope": [
+                  "[concat('/subscriptions/',subscription().subscriptionId)]"
+                ]
+              }
+            ],
+            "nonAzureQueries": [
+            ]
+          }
+        },
+        "scheduleInfo": {
+          "frequency": "OneTime",
+          "startTime": "[parameters('startTime')]",
+          "timeZone": "America/Los_Angeles",
+          "interval": 1,
+          "expiryTime": "[parameters('startTime')]",
+          "advancedSchedule": {
+          }
+        },
+        "tasks": {
+          "preTask": {
+          },
+          "postTask": {
+          }
+        }
+      }
+    }
+  ],
+  "outputs": {
+
+  }
+}

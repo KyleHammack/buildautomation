@@ -1,0 +1,16 @@
+{
+  "name": "",
+  "resource_group_name": "",
+  "traffic_routing_method": "Performance",
+  "dns_config": {
+    "relative_name": "",
+    "ttl": "60"
+  },
+  "monitor_config": {
+    "protocol": "http",
+    "port": "80",
+    "path": "/"
+  },
+  "tags": {
+  }
+}

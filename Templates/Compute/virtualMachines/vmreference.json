@@ -1,0 +1,600 @@
+{
+  "Disk": {
+    "p4": {
+      "size": 32,
+      "sku": "Premium_LRS"
+    },
+    "p6": {
+      "size": 64,
+      "sku": "Premium_LRS"
+    },
+    "p10": {
+      "size": 128,
+      "sku": "Premium_LRS"
+    },
+    "p15": {
+      "size": 256,
+      "sku": "Premium_LRS"
+    },
+    "p20": {
+      "size": 512,
+      "sku": "Premium_LRS"
+    },
+    "p30": {
+      "size": 1023,
+      "sku": "Premium_LRS"
+    },
+    "p40": {
+      "size": 2047,
+      "sku": "Premium_LRS"
+    },
+    "p50": {
+      "size": 4095,
+      "sku": "Premium_LRS"
+    },
+    "s4": {
+      "size": 32,
+      "sku": "Standard_LRS"
+    },
+    "s6": {
+      "size": 64,
+      "sku": "Standard_LRS"
+    },
+    "s10": {
+      "size": 128,
+      "sku": "Standard_LRS"
+    },
+    "s15": {
+      "size": 256,
+      "sku": "Standard_LRS"
+    },
+    "s20": {
+      "size": 512,
+      "sku": "Standard_LRS"
+    },
+    "s30": {
+      "size": 1023,
+      "sku": "Standard_LRS"
+    },
+    "s40": {
+      "size": 2047,
+      "sku": "Standard_LRS"
+    },
+    "s50": {
+      "size": 4095,
+      "sku": "Standard_LRS"
+    }
+  },
+  "Image": {
+    "CustomLinux": {
+      "imagePublisher": "",
+      "imageOffer": "",
+      "imageSKU": "",
+      "version": "",
+      "type": "linux"
+    },
+    "CustomWindows": {
+      "imagePublisher": "",
+      "imageOffer": "",
+      "imageSKU": "",
+      "version": "",
+      "type": "windows"
+    },
+    "Linux - Centos 6": {
+      "imagePublisher": "OpenLogic",
+      "imageOffer": "CentOS",
+      "imageSKU": "6.9",
+      "version": "latest",
+      "type": "linux"
+    },
+    "Linux - Centos 7": {
+      "imagePublisher": "OpenLogic",
+      "imageOffer": "CentOS",
+      "imageSKU": "7.3",
+      "version": "latest",
+      "type": "linux"
+    },
+    "Linux - Redhat 6": {
+      "imagePublisher": "RedHat",
+      "imageOffer": "RHEL",
+      "imageSKU": "6.9",
+      "version": "latest",
+      "type": "linux"
+    },
+    "Linux - Redhat 7": {
+      "imagePublisher": "RedHat",
+      "imageOffer": "RHEL",
+      "imageSKU": "7.4",
+      "version": "latest",
+      "type": "linux"
+    },
+    "Linux - Ubuntu 14.04 LTS": {
+      "imagePublisher": "Canonical",
+      "imageOffer": "UbuntuServer",
+      "imageSKU": "14.04.4-LTS",
+      "version": "latest",
+      "type": "linux"
+    },
+    "Linux - Ubuntu 16.04 LTS": {
+      "imagePublisher": "Canonical",
+      "imageOffer": "UbuntuServer",
+      "imageSKU": "16.04.0-LTS",
+      "version": "latest",
+      "type": "linux"
+    },
+    "Windows Server 2008 R2 SP1": {
+      "imagePublisher": "MicrosoftWindowsServer",
+      "imageOffer": "WindowsServer",
+      "imageSKU": "2008-R2-SP1",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows Server 2012 R2": {
+      "imagePublisher": "MicrosoftWindowsServer",
+      "imageOffer": "WindowsServer",
+      "imageSKU": "2012-R2-Datacenter",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows Server 2016 Core Server": {
+      "imagePublisher": "MicrosoftWindowsServer",
+      "imageOffer": "WindowsServer",
+      "imageSKU": "2016-Datacenter-Server-Core",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows Server 2016 Containers": {
+      "imagePublisher": "MicrosoftWindowsServer",
+      "imageOffer": "WindowsServer",
+      "imageSKU": "2016-Datacenter-with-Containers",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows Server 2016 Nano Server": {
+      "imagePublisher": "MicrosoftWindowsServer",
+      "imageOffer": "WindowsServer",
+      "imageSKU": "2016-Nano-Server",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows Server 2016 DataCenter": {
+      "imagePublisher": "MicrosoftWindowsServer",
+      "imageOffer": "WindowsServer",
+      "imageSKU": "2016-Datacenter",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows Server 2019 DataCenter": {
+      "imagePublisher": "MicrosoftWindowsServer",
+      "imageOffer": "WindowsServer",
+      "imageSKU": "2019-Datacenter",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2012 R2 SQL Server 2014 SP2 Express": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2014SP2-WS2012R2",
+      "imageSKU": "Express",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2012 R2 SQL Server 2014 SP2 Web": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2014SP2-WS2012R2",
+      "imageSKU": "Web",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2012 R2 SQL Server 2014 SP2 Standard": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2014SP2-WS2012R2",
+      "imageSKU": "Standard",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2012 R2 SQL Server 2014 SP2 Standard - BYOL": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2014SP2-WS2012R2-BYOL",
+      "imageSKU": "Standard",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2012 R2 SQL Server 2014 SP2 Enterprise": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2014SP2-WS2012R2",
+      "imageSKU": "Enterprise",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2012 R2 SQL Server 2014 SP2 Enterprise - BYOL": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2014SP2-WS2012R2-BYOL",
+      "imageSKU": "Enterprise",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2012 R2 SQL Server 2016 Express": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2016-WS2012R2",
+      "imageSKU": "Express",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2012 R2 SQL Server 2016 Web": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2016-WS2012R2",
+      "imageSKU": "Web",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2012 R2 SQL Server 2016 Standard": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2016-WS2012R2",
+      "imageSKU": "Standard",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2012 R2 SQL Server 2016 Standard - BYOL": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2016-WS2012R2-BYOL",
+      "imageSKU": "Standard",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2012 R2 SQL Server 2016 Enterprise": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2016-WS2012R2",
+      "imageSKU": "Enterprise",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2012 R2 SQL Server 2016 Enterprise - BYOL": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2016-WS2012R2-BYOL",
+      "imageSKU": "Enterprise",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2016 SQL Server 2016 SP1 Express": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2016SP1-WS2016",
+      "imageSKU": "Express",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2016 SQL Server 2016 SP1 Web": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2016SP1-WS2016",
+      "imageSKU": "Web",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2016 SQL Server 2016 SP1 Standard": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2016SP1-WS2016",
+      "imageSKU": "Standard",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2016 SQL Server 2016 SP1 Standard - BYOL": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2016SP1-WS2016-BYOL",
+      "imageSKU": "Standard",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2016 SQL Server 2016 SP1 Enterprise": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2016SP1-WS2016",
+      "imageSKU": "Enterprise",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2016 SQL Server 2016 SP1 Enterprise - BYOL": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2016SP1-WS2016-BYOL",
+      "imageSKU": "Enterprise",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2016 SQL Server 2017 Express": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2017-WS2016",
+      "imageSKU": "Express",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2016 SQL Server 2017 Web": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2017-WS2016",
+      "imageSKU": "Web",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2016 SQL Server 2017 Standard": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2017-WS2016",
+      "imageSKU": "Standard",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2016 SQL Server 2017 Standard - BYOL": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2017-WS2016-BYOL",
+      "imageSKU": "Standard",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2016 SQL Server 2017 Enterprise": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2017-WS2016",
+      "imageSKU": "Enterprise",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2016 SQL Server 2017 Enterprise - BYOL": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2017-WS2016-BYOL",
+      "imageSKU": "Enterprise",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2019 SQL Server 2016 SP2 Enterprise": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2016SP2-WS2019",
+      "imageSKU": "Enterprise",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2019 SQL Server 2017 Express": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2017-WS2019",
+      "imageSKU": "Express",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2019 SQL Server 2017 Web": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2017-WS2019",
+      "imageSKU": "Web",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2019 SQL Server 2017 Standard": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2017-WS2019",
+      "imageSKU": "Standard",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2019 SQL Server 2017 Standard - BYOL": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2017-WS2019-BYOL",
+      "imageSKU": "Standard",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2019 SQL Server 2017 Enterprise": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2017-WS2019",
+      "imageSKU": "Enterprise",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2019 SQL Server 2017 Enterprise - BYOL": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2017-WS2019-BYOL",
+      "imageSKU": "Enterprise",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2019 SQL Server 2019 Express": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2019-WS2019",
+      "imageSKU": "Express",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2019 SQL Server 2019 Web": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2019-WS2019",
+      "imageSKU": "Web",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2019 SQL Server 2019 Standard": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2019-WS2019",
+      "imageSKU": "Standard",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2019 SQL Server 2019 Standard - BYOL": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2019-WS2019-BYOL",
+      "imageSKU": "Standard",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2019 SQL Server 2019 Enterprise": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2019-WS2019",
+      "imageSKU": "Enterprise",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 2019 SQL Server 2019 Enterprise - BYOL": {
+      "imagePublisher": "MicrosoftSQLServer",
+      "imageOffer": "SQL2019-WS2019-BYOL",
+      "imageSKU": "Enterprise",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Windows 10 - MultiSession": {
+      "imagePublisher": "MicrosoftWindowsDesktop",
+      "imageOffer": "Windows-10",
+      "imageSKU": "19h2-evd",
+      "version": "latest",
+      "type": "windows"
+    },
+    "Linux - AlertLogic ThreatManager - Professional": {
+      "imagePublisher": "alertlogic",
+      "imageOffer": "alert-logic-tm",
+      "imageSKU": "20215000100-tmpbyol",
+      "version": "latest",
+      "type": "linux"
+    }
+  },
+  "regions": {
+    "australiacentral": {
+      "location": "australiacentral",
+      "abbreviation": "ace",
+      "timezone": "E. Australia Standard Time"
+    },
+    "australiacentral2": {
+      "location": "australiacentral2",
+      "abbreviation": "ac2",
+      "timezone": "E. Australia Standard Time"
+    },
+    "australiaeast": {
+      "location": "australiaeast",
+      "abbreviation": "aue",
+      "timezone": "E. Australia Standard Time"
+    },
+    "australiasoutheast": {
+      "location": "australiasoutheast",
+      "abbreviation": "ase",
+      "timezone": "E. Australia Standard Time"
+    },
+    "brazilsouth": {
+      "location": "brazilsouth",
+      "abbreviation": "bzs",
+      "timezone": "Central Brazilian Standard Time"
+    },
+    "canadacentral": {
+      "location": "canadacentral",
+      "abbreviation": "cac",
+      "timezone": "Canada Central Standard Time"
+    },
+    "canadaeast": {
+      "location": "canadaeast",
+      "abbreviation": "cae",
+      "timezone": "Eastern Standard Time"
+    },
+    "centralindia": {
+      "location": "centralindia",
+      "abbreviation": "cin",
+      "timezone": "India Standard Time"
+    },
+    "centralus": {
+      "location": "southcentralus",
+      "abbreviation": "cus",
+      "timezone": "Central Standard Time"
+    },
+    "eastasia": {
+      "location": "eastasia",
+      "abbreviation": "eas",
+      "timezone": "SE Asia Standard Time"
+    },
+    "eastus": {
+      "location": "eastus",
+      "abbreviation": "eus",
+      "timezone": "Eastern Standard Time"
+    },
+    "eastus2": {
+      "location": "eastus2",
+      "abbreviation": "eus",
+      "timezone": "Eastern Standard Time"
+    },
+    "francecentral": {
+      "location": "francecentral",
+      "abbreviation": "frc",
+      "timezone": "Romance Standard Time"
+    },
+    "francesouth": {
+      "location": "francesouth",
+      "abbreviation": "frs",
+      "timezone": "Romance Standard Time"
+    },
+    "japaneast": {
+      "location": "japaneast",
+      "abbreviation": "jpe",
+      "timezone": "Tokyo Standard Time"
+    },
+    "japanwest": {
+      "location": "japanwest",
+      "abbreviation": "jpw",
+      "timezone": "Tokyo Standard Tim"
+    },
+    "koreacentral": {
+      "location": "koreacentral",
+      "abbreviation": "kce",
+      "timezone": "Korea Standard Time"
+    },
+    "koreasouth": {
+      "location": "koreasouth",
+      "abbreviation": "kos",
+      "timezone": "Korea Standard Time"
+    },
+    "northcentralus": {
+      "location": "northcentralus",
+      "abbreviation": "ncu",
+      "timezone": "Central Standard Time"
+    },
+    "northeurope": {
+      "location": "northeurope",
+      "abbreviation": "neu",
+      "timezone": "GMT Standard Time"
+    },
+    "southcentralus": {
+      "location": "southcentralus",
+      "abbreviation": "scu",
+      "timezone": "Central Standard Time"
+    },
+    "southeastasia": {
+      "location": "southeastasia",
+      "abbreviation": "sea",
+      "timezone": "SE Asia Standard Time"
+    },
+    "southindia": {
+      "location": "southindia",
+      "abbreviation": "soi",
+      "timezone": "India Standard Time"
+    },
+    "uksouth": {
+      "location": "uksouth",
+      "abbreviation": "uks",
+      "timezone": "GMT Standard Time"
+    },
+    "ukwest": {
+      "location": "ukwest",
+      "abbreviation": "ukw",
+      "timezone": "GMT Standard Time"
+    },
+    "westcentralus": {
+      "location": "westcentralus",
+      "abbreviation": "wcu",
+      "timezone": "Pacific Standard Time"
+    },
+    "westeurope": {
+      "location": "westeurope",
+      "abbreviation": "weu",
+      "timezone": "GMT Standard Time"
+    },
+    "westindia": {
+      "location": "westindia",
+      "abbreviation": "win",
+      "timezone": "India Standard Time"
+    },
+    "westus": {
+      "location": "westus",
+      "abbreviation": "wus",
+      "timezone": "Pacific Standard Time"
+    },
+    "westus2": {
+      "location": "westus2",
+      "abbreviation": "wus",
+      "timezone": "Pacific Standard Time"
+    }
+  }
+}

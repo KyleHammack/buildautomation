@@ -1,0 +1,16 @@
+{
+  "name": "",
+  "location": "",
+  "resource_group_name": "",
+  "server_name": "",
+  "max_size_gb": "",
+  "sku": {
+    "name": "",
+    "capacity": "",
+    "tier": ""
+  },
+  "per_database_settings": {
+    "min_capacity": "",
+    "max_capacity": ""
+  }
+}
