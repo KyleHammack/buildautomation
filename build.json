@@ -1,0 +1,1164 @@
+{
+  "ConfigurationItems": {
+    "Build": {
+      "Engineer": "Kyle Hammack",
+      "Ticket": "T0001",
+      "Date": "2019-08-12"
+    },
+    "Customer": {
+      "Name": "Test Customer",
+      "Account": "100001",
+      "Device": "100001"
+    },
+    "Cloud": {
+      "Azure": {
+        "csp": true,
+        "ea": false,
+        "Subscription": {
+          "Id": "",
+          "Name": "",
+          "TenantId": "0000000-0000-0000-0000-00000000000"
+        },
+        "ActiveDirectory": {
+          "AADTenantName": "tenant.com",
+          "DomainName": "domain.local"
+        }
+      }
+    },
+    "Environment": [
+      {
+        "Name": "Production",
+        "Region": "eastus2",
+        "Provider": {
+          "AzureResourceManager": {
+            "Microsoft.Automation": {
+              "automationAccounts": [
+                {
+                  "name": "test-1038667-aa",
+                  "ResourceGroupName": "EU2-RSG-MGMT",
+                  "Sku": "Basic",
+                  "location": "eastus2"
+                }
+              ]
+            },
+            "Microsoft.Compute": {
+              "virtualMachines": [
+                {
+                  "name": "EU2-PRD-DC01",
+                  "ResourceGroupName": "EU2-RSG-PRD",
+                  "Size": "B2ms",
+                  "OperatingSystem": "Windows Server 2016 DataCenter",
+                  "AdminUserName": "test-admin",
+                  "AdminPassword": "pass",
+                  "AvailabilitySetName": "EU2-PRD-DC-AVSET",
+                  "Network": {
+                    "Name": "EU2-PRD-DC01-nic",
+                    "ResourceGroupName": "EU2-RSG-MGMT",
+                    "SubnetName": "EU2-VNET01-AD-PRD",
+                    "VirtualNetworkName": "EU2-VNET01"
+                  },
+                  "Diagnostics": {
+                    "BootDiagnostics": true
+                  },
+                  "OsDisk": {
+                    "Name": "EU2-PRD-DC01-osdisk",
+                    "DiskSize": "p10",
+                    "createOption": "FromImage",
+                    "Caching": "ReadWrite"
+                  },
+                  "DataDisks": [
+                    {
+                      "name": "EU2-PRD-DC01-data1",
+                      "size": "p4",
+                      "lun": 0,
+                      "caching": "None"
+                    }
+                  ]
+                },
+                {
+                  "name": "EU2-PRD-DC02",
+                  "ResourceGroupName": "EU2-RSG-PRD",
+                  "Size": "B2ms",
+                  "OperatingSystem": "Windows Server 2016 DataCenter",
+                  "AdminUserName": "test-admin",
+                  "AdminPassword": "pass",
+                  "AvailabilitySetName": "EU2-PRD-DC-AVSET",
+                  "Network": {
+                    "Name": "EU2-PRD-DC02-nic",
+                    "ResourceGroupName": "EU2-RSG-MGMT",
+                    "SubnetName": "EU2-VNET01-AD-PRD",
+                    "VirtualNetworkName": "EU2-VNET01"
+                  },
+                  "Diagnostics": {
+                    "BootDiagnostics": true
+                  },
+                  "OsDisk": {
+                    "Name": "EU2-PRD-DC02-osdisk",
+                    "DiskSize": "p10",
+                    "createOption": "FromImage",
+                    "Caching": "ReadWrite"
+                  },
+                  "DataDisks": [
+                    {
+                      "name": "EU2-PRD-DC02-data1",
+                      "size": "p4",
+                      "lun": 0,
+                      "caching": "None"
+                    }
+                  ]
+                },
+                {
+                  "name": "EU2-PRD-WEB01",
+                  "ResourceGroupName": "EU2-RSG-PRD",
+                  "Size": "D4s_v3",
+                  "OperatingSystem": "Windows Server 2016 DataCenter",
+                  "AdminUserName": "test-admin",
+                  "AdminPassword": "pass",
+                  "AvailabilitySetName": "EU2-PRD-WEB-AVSET",
+                  "Network": {
+                    "Name": "EU2-PRD-WEB01-nic",
+                    "ResourceGroupName": "EU2-RSG-MGMT",
+                    "SubnetName": "EU2-VNET01-DMZ-PRD",
+                    "VirtualNetworkName": "EU2-VNET01"
+                  },
+                  "Diagnostics": {
+                    "BootDiagnostics": true
+                  },
+                  "OsDisk": {
+                    "Name": "EU2-PRD-WEB01-osdisk",
+                    "DiskSize": "p10",
+                    "createOption": "FromImage",
+                    "Caching": "ReadWrite"
+                  }
+                },
+                {
+                  "name": "EU2-PRD-WEB02",
+                  "ResourceGroupName": "EU2-RSG-PRD",
+                  "Size": "D4s_v3",
+                  "OperatingSystem": "Windows Server 2016 DataCenter",
+                  "AdminUserName": "test-admin",
+                  "AdminPassword": "pass",
+                  "AvailabilitySetName": "EU2-PRD-WEB-AVSET",
+                  "Network": {
+                    "Name": "EU2-PRD-WEB02-nic",
+                    "ResourceGroupName": "EU2-RSG-MGMT",
+                    "SubnetName": "EU2-VNET01-DMZ-PRD",
+                    "VirtualNetworkName": "EU2-VNET01"
+                  },
+                  "Diagnostics": {
+                    "BootDiagnostics": true
+                  },
+                  "OsDisk": {
+                    "Name": "EU2-PRD-WEB02-osdisk",
+                    "DiskSize": "p10",
+                    "createOption": "FromImage",
+                    "Caching": "ReadWrite"
+                  }
+                },
+                {
+                  "name": "EU2-PRD-RDGW01",
+                  "ResourceGroupName": "EU2-RSG-PRD",
+                  "Size": "D3_v2",
+                  "OperatingSystem": "Windows Server 2016 DataCenter",
+                  "AdminUserName": "test-admin",
+                  "AdminPassword": "pass",
+                  "AvailabilitySetName": "EU2-PRD-RDGW-AVSET",
+                  "Network": {
+                    "Name": "EU2-PRD-RDGW01-nic",
+                    "ResourceGroupName": "EU2-RSG-MGMT",
+                    "SubnetName": "EU2-VNET01-DMZ-PRD",
+                    "VirtualNetworkName": "EU2-VNET01"
+                  },
+                  "Diagnostics": {
+                    "BootDiagnostics": true
+                  },
+                  "OsDisk": {
+                    "Name": "EU2-PRD-RDGW01-osdisk",
+                    "DiskSize": "p10",
+                    "createOption": "FromImage",
+                    "Caching": "ReadWrite"
+                  }
+                },
+                {
+                  "name": "EU2-PRD-RDGW02",
+                  "ResourceGroupName": "EU2-RSG-PRD",
+                  "Size": "D3_v2",
+                  "OperatingSystem": "Windows Server 2016 DataCenter",
+                  "AdminUserName": "test-admin",
+                  "AdminPassword": "pass",
+                  "AvailabilitySetName": "EU2-PRD-RDGW-AVSET",
+                  "Network": {
+                    "Name": "EU2-PRD-RDGW02-nic",
+                    "ResourceGroupName": "EU2-RSG-MGMT",
+                    "SubnetName": "EU2-VNET01-DMZ-PRD",
+                    "VirtualNetworkName": "EU2-VNET01"
+                  },
+                  "Diagnostics": {
+                    "BootDiagnostics": true
+                    "StorageAccountName": "StorageAccount"
+                  },
+                  "OsDisk": {
+                    "Name": "EU2-PRD-RDGW02-osdisk",
+                    "DiskSize": "p10",
+                    "createOption": "FromImage",
+                    "Caching": "ReadWrite"
+                  }
+                },
+                {
+                  "name": "EU2-PRD-CBLS01",
+                  "ResourceGroupName": "EU2-RSG-PRD",
+                  "Size": "D3_v2",
+                  "OperatingSystem": "Windows Server 2016 DataCenter",
+                  "AdminUserName": "test-admin",
+                  "AdminPassword": "pass",
+                  "AvailabilitySetName": "EU2-PRD-CBLS-AVSET",
+                  "Network": {
+                    "Name": "EU2-PRD-CBLS01-nic",
+                    "ResourceGroupName": "EU2-RSG-MGMT",
+                    "SubnetName": "EU2-VNET01-CBLS-PRD",
+                    "VirtualNetworkName": "EU2-VNET01"
+                  },
+                  "Diagnostics": {
+                    "BootDiagnostics": true
+                  },
+                  "OsDisk": {
+                    "Name": "EU2-PRD-CBLS01-osdisk",
+                    "DiskSize": "p10",
+                    "createOption": "FromImage",
+                    "Caching": "ReadWrite"
+                  }
+                },
+                {
+                  "name": "EU2-PRD-CBLS02",
+                  "ResourceGroupName": "EU2-RSG-PRD",
+                  "Size": "D3_v2",
+                  "OperatingSystem": "Windows Server 2016 DataCenter",
+                  "AdminUserName": "test-admin",
+                  "AdminPassword": "pass",
+                  "AvailabilitySetName": "EU2-PRD-CBLS-AVSET",
+                  "Network": {
+                    "Name": "EU2-PRD-CBLS02-nic",
+                    "ResourceGroupName": "EU2-RSG-MGMT",
+                    "SubnetName": "EU2-VNET01-CBLS-PRD",
+                    "VirtualNetworkName": "EU2-VNET01"
+                  },
+                  "Diagnostics": {
+                    "BootDiagnostics": true
+                  },
+                  "OsDisk": {
+                    "Name": "EU2-PRD-CBLS02-osdisk",
+                    "DiskSize": "p10",
+                    "createOption": "FromImage",
+                    "Caching": "ReadWrite"
+                  }
+                },
+                {
+                  "name": "EU2-PRD-UTIL01",
+                  "ResourceGroupName": "EU2-RSG-PRD",
+                  "Size": "D4s_v3",
+                  "OperatingSystem": "Windows Server 2016 DataCenter",
+                  "AdminUserName": "test-admin",
+                  "AdminPassword": "pass",
+                  "AvailabilitySetName": "EU2-PRD-UTIL-AVSET",
+                  "Network": {
+                    "Name": "EU2-PRD-UTIL01-nic",
+                    "ResourceGroupName": "EU2-RSG-MGMT",
+                    "SubnetName": "EU2-VNET01-UTIL-PRD",
+                    "VirtualNetworkName": "EU2-VNET01"
+                  },
+                  "Diagnostics": {
+                    "BootDiagnostics": true
+                  },
+                  "OsDisk": {
+                    "Name": "EU2-PRD-UTIL01-osdisk",
+                    "DiskSize": "p10",
+                    "createOption": "FromImage",
+                    "Caching": "ReadWrite"
+                  }
+                },
+                {
+                  "name": "EU2-PRD-PRNT01",
+                  "ResourceGroupName": "EU2-RSG-PRD",
+                  "Size": "D4s_v3",
+                  "OperatingSystem": "Windows Server 2016 DataCenter",
+                  "AdminUserName": "test-admin",
+                  "AdminPassword": "pass",
+                  "AvailabilitySetName": "EU2-PRD-PRNT-AVSET",
+                  "Network": {
+                    "Name": "EU2-PRD-PRNT01-nic",
+                    "ResourceGroupName": "EU2-RSG-MGMT",
+                    "SubnetName": "EU2-VNET01-UTIL-PRD",
+                    "VirtualNetworkName": "EU2-VNET01"
+                  },
+                  "Diagnostics": {
+                    "BootDiagnostics": true
+                  },
+                  "OsDisk": {
+                    "Name": "EU2-PRD-PRNT01-osdisk",
+                    "DiskSize": "p10",
+                    "createOption": "FromImage",
+                    "Caching": "ReadWrite"
+                  }
+                },
+                {
+                  "name": "EU2-PRD-EXCH01",
+                  "ResourceGroupName": "EU2-RSG-PRD",
+                  "Size": "E2s_v3",
+                  "OperatingSystem": "Windows Server 2016 DataCenter",
+                  "AdminUserName": "test-admin",
+                  "AdminPassword": "pass",
+                  "AvailabilitySetName": "EU2-PRD-EXCH-AVSET",
+                  "Network": {
+                    "Name": "EU2-PRD-EXCH01-nic",
+                    "ResourceGroupName": "EU2-RSG-MGMT",
+                    "SubnetName": "EU2-VNET01-UTIL-PRD",
+                    "VirtualNetworkName": "EU2-VNET01"
+                  },
+                  "Diagnostics": {
+                    "BootDiagnostics": true
+                  },
+                  "OsDisk": {
+                    "Name": "EU2-PRD-EXCH0101-osdisk",
+                    "DiskSize": "p10",
+                    "createOption": "FromImage",
+                    "Caching": "ReadWrite"
+                  }
+                },
+                {
+                  "name": "EU2-PRD-SSRS01",
+                  "ResourceGroupName": "EU2-RSG-PRD",
+                  "Size": "D4s_v3",
+                  "OperatingSystem": "Windows 2016 SQL Server 2017 Standard",
+                  "AdminUserName": "test-admin",
+                  "AdminPassword": "pass",
+                  "AvailabilitySetName": "EU2-PRD-SSRS-AVSET",
+                  "Network": {
+                    "Name": "EU2-PRD-SSRS01-nic",
+                    "ResourceGroupName": "EU2-RSG-MGMT",
+                    "SubnetName": "EU2-VNET01-INS-PRD",
+                    "VirtualNetworkName": "EU2-VNET01"
+                  },
+                  "Diagnostics": {
+                    "BootDiagnostics": true
+                  },
+                  "OsDisk": {
+                    "Name": "EU2-PRD-SSRS01-osdisk",
+                    "DiskSize": "p10",
+                    "createOption": "FromImage",
+                    "Caching": "ReadWrite"
+                  },
+                  "DataDisks": [
+                    {
+                      "name": "EU2-PRD-SSRS01-data1",
+                      "size": "p30",
+                      "lun": 0,
+                      "caching": "ReadOnly"
+                    },
+                    {
+                      "name": "EU2-PRD-SSRS01-data2",
+                      "size": "p30",
+                      "lun": 1,
+                      "caching": "None"
+                    }
+                  ]
+                },
+                {
+                  "name": "EU2-PRD-FS01",
+                  "ResourceGroupName": "EU2-RSG-PRD",
+                  "Size": "D2s_v3",
+                  "OperatingSystem": "Windows Server 2016 DataCenter",
+                  "AdminUserName": "test-admin",
+                  "AdminPassword": "pass",
+                  "AvailabilitySetName": "EU2-PRD-FS-AVSET",
+                  "Network": {
+                    "Name": "EU2-PRD-FS01-nic",
+                    "ResourceGroupName": "EU2-RSG-MGMT",
+                    "SubnetName": "EU2-VNET01-INS-PRD",
+                    "VirtualNetworkName": "EU2-VNET01"
+                  },
+                  "Diagnostics": {
+                    "BootDiagnostics": true
+                  },
+                  "OsDisk": {
+                    "Name": "EU2-PRD-FS01-osdisk",
+                    "DiskSize": "p10",
+                    "createOption": "FromImage",
+                    "Caching": "ReadWrite"
+                  },
+                  "DataDisks": [
+                    {
+                      "name": "EU2-PRD-FS01-data1",
+                      "size": "p30",
+                      "lun": 0,
+                      "caching": "None"
+                    },
+                    {
+                      "name": "EU2-PRD-FS01-data2",
+                      "size": "p30",
+                      "lun": 1,
+                      "caching": "None"
+                    }
+                  ]
+                },
+                {
+                  "name": "EU2-PRD-FS02",
+                  "ResourceGroupName": "EU2-RSG-PRD",
+                  "Size": "D2s_v3",
+                  "OperatingSystem": "Windows Server 2016 DataCenter",
+                  "AdminUserName": "test-admin",
+                  "AdminPassword": "pass",
+                  "AvailabilitySetName": "EU2-PRD-FS-AVSET",
+                  "Network": {
+                    "Name": "EU2-PRD-FS02-nic",
+                    "ResourceGroupName": "EU2-RSG-MGMT",
+                    "SubnetName": "EU2-VNET01-INS-PRD",
+                    "VirtualNetworkName": "EU2-VNET01"
+                  },
+                  "Diagnostics": {
+                    "BootDiagnostics": true
+                  },
+                  "OsDisk": {
+                    "Name": "EU2-PRD-FS02-osdisk",
+                    "DiskSize": "p10",
+                    "createOption": "FromImage",
+                    "Caching": "ReadWrite"
+                  },
+                  "DataDisks": [
+                    {
+                      "name": "EU2-PRD-FS02-data1",
+                      "size": "p30",
+                      "lun": 0,
+                      "caching": "None"
+                    },
+                    {
+                      "name": "EU2-PRD-FS02-data2",
+                      "size": "p30",
+                      "lun": 1,
+                      "caching": "None"
+                    }
+                  ]
+                },
+                {
+                  "name": "EU2-PRD-INF01",
+                  "ResourceGroupName": "EU2-RSG-PRD",
+                  "Size": "F4s_v2",
+                  "OperatingSystem": "Windows Server 2016 DataCenter",
+                  "AdminUserName": "test-admin",
+                  "AdminPassword": "pass",
+                  "AvailabilitySetName": "EU2-PRD-INF-AVSET",
+                  "Network": {
+                    "Name": "EU2-PRD-INF01-nic",
+                    "ResourceGroupName": "EU2-RSG-MGMT",
+                    "SubnetName": "EU2-VNET01-APP-PRD",
+                    "VirtualNetworkName": "EU2-VNET01"
+                  },
+                  "Diagnostics": {
+                    "BootDiagnostics": true
+                  },
+                  "OsDisk": {
+                    "Name": "EU2-PRD-INF01-osdisk",
+                    "DiskSize": "p10",
+                    "createOption": "FromImage",
+                    "Caching": "ReadWrite"
+                  }
+                },
+                {
+                  "name": "EU2-PRD-INF02",
+                  "ResourceGroupName": "EU2-RSG-PRD",
+                  "Size": "F4s_v2",
+                  "OperatingSystem": "Windows Server 2016 DataCenter",
+                  "AdminUserName": "test-admin",
+                  "AdminPassword": "pass",
+                  "AvailabilitySetName": "EU2-PRD-INF-AVSET",
+                  "Network": {
+                    "Name": "EU2-PRD-INF02-nic",
+                    "ResourceGroupName": "EU2-RSG-MGMT",
+                    "SubnetName": "EU2-VNET01-APP-PRD",
+                    "VirtualNetworkName": "EU2-VNET01"
+                  },
+                  "Diagnostics": {
+                    "BootDiagnostics": true
+                  },
+                  "OsDisk": {
+                    "Name": "EU2-PRD-INF02-osdisk",
+                    "DiskSize": "p10",
+                    "createOption": "FromImage",
+                    "Caching": "ReadWrite"
+                  }
+                },
+                {
+                  "name": "EU2-PRD-CDF01",
+                  "ResourceGroupName": "EU2-RSG-PRD",
+                  "Size": "D4s_v3",
+                  "OperatingSystem": "Windows Server 2016 DataCenter",
+                  "AdminUserName": "test-admin",
+                  "AdminPassword": "pass",
+                  "AvailabilitySetName": "EU2-PRD-CDF-AVSET",
+                  "Network": {
+                    "Name": "EU2-PRD-CDF01-nic",
+                    "ResourceGroupName": "EU2-RSG-MGMT",
+                    "SubnetName": "EU2-VNET01-APP-PRD",
+                    "VirtualNetworkName": "EU2-VNET01"
+                  },
+                  "Diagnostics": {
+                    "BootDiagnostics": true
+                  },
+                  "OsDisk": {
+                    "Name": "EU2-PRD-CDF01-osdisk",
+                    "DiskSize": "p10",
+                    "createOption": "FromImage",
+                    "Caching": "ReadWrite"
+                  }
+                },
+                {
+                  "name": "EU2-PRD-CDF02",
+                  "ResourceGroupName": "EU2-RSG-PRD",
+                  "Size": "D4s_v3",
+                  "OperatingSystem": "Windows Server 2016 DataCenter",
+                  "AdminUserName": "test-admin",
+                  "AdminPassword": "pass",
+                  "AvailabilitySetName": "EU2-PRD-CDF-AVSET",
+                  "Network": {
+                    "Name": "EU2-PRD-CDF02-nic",
+                    "ResourceGroupName": "EU2-RSG-MGMT",
+                    "SubnetName": "EU2-VNET01-APP-PRD",
+                    "VirtualNetworkName": "EU2-VNET01"
+                  },
+                  "Diagnostics": {
+                    "BootDiagnostics": true
+                  },
+                  "OsDisk": {
+                    "Name": "EU2-PRD-CDF02-osdisk",
+                    "DiskSize": "p10",
+                    "createOption": "FromImage",
+                    "Caching": "ReadWrite"
+                  }
+                },
+                {
+                  "name": "EU2-PRD-RDSH01",
+                  "ResourceGroupName": "EU2-RSG-PRD",
+                  "Size": "DS4_v2",
+                  "OperatingSystem": "Windows Server 2016 DataCenter",
+                  "AdminUserName": "test-admin",
+                  "AdminPassword": "pass",
+                  "AvailabilitySetName": "EU2-PRD-RDSH-AVSET",
+                  "Network": {
+                    "Name": "EU2-PRD-RDSH01-nic",
+                    "ResourceGroupName": "EU2-RSG-MGMT",
+                    "SubnetName": "EU2-VNET01-RDSH-PRD",
+                    "VirtualNetworkName": "EU2-VNET01"
+                  },
+                  "Diagnostics": {
+                    "BootDiagnostics": true
+                  },
+                  "OsDisk": {
+                    "Name": "EU2-PRD-RDSH01-osdisk",
+                    "DiskSize": "p10",
+                    "createOption": "FromImage",
+                    "Caching": "ReadWrite"
+                  }
+                }
+              ]
+            },
+            "Microsoft.Network": {
+              "connections": [
+                {
+                  "name": "S2S",
+                  "connectionProtocol": "IKEv2",
+                  "connectionType": "Ipsec",
+                  "ResourceGroupName": "EU2-RSG-MGMT",
+                  "LocalNetworkGateway2": {
+                    "Name": "LocalGW",
+                    "ResourceGroupName": "EU2-RSG-MGMT",
+                    "id": ""
+                  }
+                },
+                {
+                  "name": "EU2-VNET01",
+                  "connectionProtocol": "IKEv1",
+                  "connectionType": "Vnet2Vnet",
+                  "ResourceGroupName": "EU2-RSG-MGMT",
+                  "VirtualNetworkPeer": {
+                    "Name": "EU2-VNET02",
+                    "ResourceGroupName": "EU2-RSG-MGMT",
+                    "id": ""
+                  }
+                }
+              ],
+              "loadBalancers": [
+                {
+                  "name": "EU2-PRD-RDGW-ELB01",
+                  "ResourceGroupName": "EU2-RSG-PRD",
+                  "ExternalLoadBalancer": true,
+                  "publicIPAllocationMethod": "Dynamic",
+                  "sku": "Basic",
+                  "loadBalancingRules": [
+                    {
+                      "backendPort": 80,
+                      "FrontendIpConfigurationName": "fe-ipconfig",
+                      "frontendPort": 80,
+                      "intervalInSeconds": 5,
+                      "numberOfProbes": 2,
+                      "privateIPAddress": "",
+                      "privateIPAllocationMethod": "Dynamic",
+                      "protocol": "Tcp",
+                      "disableOutboundSnat": false,
+                      "enableFloatingIP": false,
+                      "enableTcpReset": false,
+                      "idleTimeoutInMinutes": 4,
+                      "loadDistribution": "Default"
+                    }
+                  ],
+                  "Network": {
+                    "ResourceGroupName": "EU2-RSG-MGMT",
+                    "SubnetName": "EU2-VNET01-DMZ-PRD",
+                    "VirtualNetworkName": "EU2-VNET01"
+                  }
+                },
+                {
+                  "name": "EU2-PRD-WEB-ELB02",
+                  "ResourceGroupName": "EU2-RSG-PRD",
+                  "ExternalLoadBalancer": true,
+                  "publicIPAllocationMethod": "Dynamic",
+                  "sku": "Basic",
+                  "loadBalancingRules": [
+                    {
+                      "backendPort": 80,
+                      "FrontendIpConfigurationName": "fe-ipconfig",
+                      "frontendPort": 80,
+                      "intervalInSeconds": 5,
+                      "numberOfProbes": 2,
+                      "privateIPAddress": "",
+                      "privateIPAllocationMethod": "Dynamic",
+                      "protocol": "Tcp",
+                      "disableOutboundSnat": false,
+                      "enableFloatingIP": false,
+                      "enableTcpReset": false,
+                      "idleTimeoutInMinutes": 4,
+                      "loadDistribution": "Default"
+                    }
+                  ],
+                  "Network": {
+                    "ResourceGroupName": "EU2-RSG-MGMT",
+                    "SubnetName": "EU2-VNET01-DMZ-PRD",
+                    "VirtualNetworkName": "EU2-VNET01"
+                  }
+                },
+                {
+                  "name": "EU2-PRD-FS-ILB01",
+                  "ResourceGroupName": "EU2-RSG-PRD",
+                  "ExternalLoadBalancer": false,
+                  "sku": "Standard",
+                  "loadBalancingRules": [
+                    {
+                      "backendPort": 445,
+                      "FrontendIpConfigurationName": "fe-ipconfig",
+                      "frontendPort": 445,
+                      "intervalInSeconds": 5,
+                      "numberOfProbes": 2,
+                      "privateIPAddress": "",
+                      "privateIPAllocationMethod": "Dynamic",
+                      "protocol": "Tcp",
+                      "disableOutboundSnat": false,
+                      "enableFloatingIP": false,
+                      "enableTcpReset": false,
+                      "idleTimeoutInMinutes": 4,
+                      "loadDistribution": "Default"
+                    }
+                  ],
+                  "Network": {
+                    "ResourceGroupName": "EU2-RSG-MGMT",
+                    "SubnetName": "EU2-VNET01-INS-PRD",
+                    "VirtualNetworkName": "EU2-VNET01"
+                  }
+                },
+                {
+                  "name": "EU2-PRD-CBLS-ILB02",
+                  "ResourceGroupName": "EU2-RSG-PRD",
+                  "ExternalLoadBalancer": false,
+                  "sku": "Basic",
+                  "loadBalancingRules": [
+                    {
+                      "backendPort": 5504,
+                      "FrontendIpConfigurationName": "fe-ipconfig",
+                      "frontendPort": 5504,
+                      "intervalInSeconds": 5,
+                      "numberOfProbes": 2,
+                      "privateIPAddress": "",
+                      "privateIPAllocationMethod": "Dynamic",
+                      "protocol": "Tcp",
+                      "disableOutboundSnat": false,
+                      "enableFloatingIP": false,
+                      "enableTcpReset": false,
+                      "idleTimeoutInMinutes": 4,
+                      "loadDistribution": "Default"
+                    }
+                  ],
+                  "Network": {
+                    "ResourceGroupName": "EU2-RSG-MGMT",
+                    "SubnetName": "EU2-VNET01-CBLS-PRD",
+                    "VirtualNetworkName": "EU2-VNET01"
+                  }
+                },
+                {
+                  "name": "EU2-PRD-CDF-ILB03",
+                  "ResourceGroupName": "EU2-RSG-PRD",
+                  "ExternalLoadBalancer": false,
+                  "sku": "Basic",
+                  "loadBalancingRules": [
+                    {
+                      "backendPort": 443,
+                      "FrontendIpConfigurationName": "fe-ipconfig",
+                      "frontendPort": 443,
+                      "intervalInSeconds": 5,
+                      "numberOfProbes": 2,
+                      "privateIPAddress": "",
+                      "privateIPAllocationMethod": "Dynamic",
+                      "protocol": "Tcp",
+                      "disableOutboundSnat": false,
+                      "enableFloatingIP": false,
+                      "enableTcpReset": false,
+                      "idleTimeoutInMinutes": 4,
+                      "loadDistribution": "Default"
+                    }
+                  ],
+                  "Network": {
+                    "ResourceGroupName": "EU2-RSG-MGMT",
+                    "SubnetName": "EU2-VNET01-APP-PRD",
+                    "VirtualNetworkName": "EU2-VNET01"
+                  }
+                }
+              ],
+              "localNetworkGateways": [
+                {
+                  "name": "LocalGW",
+                  "gatewayIpAddress": "1.1.1.1",
+                  "localNetworkAddressSpace": {
+                    "addressPrefixes": [
+                      "172.24.16.0/22",
+                      "192.168.50.0/24",
+                      "192.168.99.0/24",
+                      "172.24.32.0/22",
+                      "172.16.96.0/22",
+                      "192.168.100.0/24"
+                    ]
+                  },
+                  "ResourceGroupName": "EU2-RSG-MGMT"
+                }
+              ],
+              "networkSecurityGroups": [
+                {
+                  "name": "EU2-VNET01-AD-PRD-NSG",
+                  "ResourceGroupName": "EU2-RSG-MGMT",
+                  "BastionPrefix": "172.16.192.32/27",
+                  "DestinationPrefix": "172.16.192.0/27",
+                  "DeploymentType": "DomainController",
+                  "Network": {
+                    "ResourceGroupName": "EU2-RSG-MGMT",
+                    "SubnetName": "EU2-VNET01-AD-PRD",
+                    "VirtualNetworkName": "EU2-VNET01"
+                  },
+                  "SecurityRules": [
+                    {
+                      "name": "allow_vpn_rdp",
+                      "properties": {
+                        "access": "Allow",
+                        "description": "",
+                        "destinationAddressPrefix": "172.16.192.0/27",
+                        "destinationPortRange": "3389",
+                        "direction": "inbound",
+                        "priority": 300,
+                        "protocol": "Tcp",
+                        "sourceAddressPrefix": "172.24.16.0/22",
+                        "sourcePortRange": "*"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "EU2-VNET01-BAST-PRD-NSG",
+                  "ResourceGroupName": "EU2-RSG-MGMT",
+                  "BastionPrefix": "172.16.192.32/27",
+                  "DestinationPrefix": "172.16.192.32/27",
+                  "DeploymentType": "Bastion",
+                  "Network": {
+                    "ResourceGroupName": "EU2-RSG-MGMT",
+                    "SubnetName": "EU2-VNET01-BAST-PRD",
+                    "VirtualNetworkName": "EU2-VNET01"
+                  },
+                  "SecurityRules": [
+                  ]
+                },
+                {
+                  "name": "EU2-VNET01-CBLS-PRD-NSG",
+                  "ResourceGroupName": "EU2-RSG-MGMT",
+                  "BastionPrefix": "172.16.192.32/27",
+                  "DestinationPrefix": "172.16.192.96/27",
+                  "DeploymentType": "Default",
+                  "Network": {
+                    "ResourceGroupName": "EU2-RSG-MGMT",
+                    "SubnetName": "EU2-VNET01-CBLS-PRD",
+                    "VirtualNetworkName": "EU2-VNET01"
+                  },
+                  "SecurityRules": [
+                    {
+                      "name": "allow_vpn_rdp",
+                      "properties": {
+                        "access": "Allow",
+                        "description": "",
+                        "destinationAddressPrefix": "172.16.192.96/27",
+                        "destinationPortRange": "3389",
+                        "direction": "inbound",
+                        "priority": 300,
+                        "protocol": "Tcp",
+                        "sourceAddressPrefix": "172.24.16.0/22",
+                        "sourcePortRange": "*"
+                      }
+                    },
+                    {
+                      "name": "Allow_RDGW_to_CBLS_5504",
+                      "properties": {
+                        "access": "Allow",
+                        "description": "",
+                        "destinationAddressPrefix": "172.16.192.96/27",
+                        "destinationPortRange": "5504",
+                        "direction": "inbound",
+                        "priority": 301,
+                        "protocol": "Tcp",
+                        "sourceAddressPrefix": "172.16.193.0/24",
+                        "sourcePortRange": "*"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "EU2-VNET01-UTIL-PRD-NSG",
+                  "ResourceGroupName": "EU2-RSG-MGMT",
+                  "BastionPrefix": "172.16.192.32/27",
+                  "DestinationPrefix": "172.16.192.128/27",
+                  "DeploymentType": "Default",
+                  "Network": {
+                    "ResourceGroupName": "EU2-RSG-MGMT",
+                    "SubnetName": "EU2-VNET01-UTIL-PRD",
+                    "VirtualNetworkName": "EU2-VNET01"
+                  },
+                  "SecurityRules": [
+                    {
+                      "name": "allow_vpn_rdp",
+                      "properties": {
+                        "access": "Allow",
+                        "description": "",
+                        "destinationAddressPrefix": "172.16.192.128/27",
+                        "destinationPortRange": "3389",
+                        "direction": "inbound",
+                        "priority": 300,
+                        "protocol": "Tcp",
+                        "sourceAddressPrefix": "172.24.16.0/22",
+                        "sourcePortRange": "*"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "EU2-VNET01-APP-PRD-NSG",
+                  "ResourceGroupName": "EU2-RSG-MGMT",
+                  "BastionPrefix": "172.16.192.32/27",
+                  "DestinationPrefix": "172.16.192.160/27",
+                  "DeploymentType": "Default",
+                  "Network": {
+                    "ResourceGroupName": "EU2-RSG-MGMT",
+                    "SubnetName": "EU2-VNET01-APP-PRD",
+                    "VirtualNetworkName": "EU2-VNET01"
+                  },
+                  "SecurityRules": [
+                    {
+                      "name": "allow_vpn_rdp",
+                      "properties": {
+                        "access": "Allow",
+                        "description": "",
+                        "destinationAddressPrefix": "172.16.192.160/27",
+                        "destinationPortRange": "3389",
+                        "direction": "inbound",
+                        "priority": 300,
+                        "protocol": "Tcp",
+                        "sourceAddressPrefix": "172.24.16.0/22",
+                        "sourcePortRange": "*"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "EU2-VNET01-DMZ-PRD-NSG",
+                  "ResourceGroupName": "EU2-RSG-MGMT",
+                  "BastionPrefix": "172.16.192.32/27",
+                  "DestinationPrefix": "172.16.193.0/24",
+                  "DeploymentType": "ApplicationGateway",
+                  "Network": {
+                    "ResourceGroupName": "EU2-RSG-MGMT",
+                    "SubnetName": "EU2-VNET01-DMZ-PRD",
+                    "VirtualNetworkName": "EU2-VNET01"
+                  },
+                  "SecurityRules": [
+                    {
+                      "name": "allow_vpn_rdp",
+                      "properties": {
+                        "access": "Allow",
+                        "description": "",
+                        "destinationAddressPrefix": "172.16.193.0/24",
+                        "destinationPortRange": "3389",
+                        "direction": "inbound",
+                        "priority": 300,
+                        "protocol": "Tcp",
+                        "sourceAddressPrefix": "172.24.16.0/22",
+                        "sourcePortRange": "*"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "EU2-VNET01-RDSH-PRD-NSG",
+                  "ResourceGroupName": "EU2-RSG-MGMT",
+                  "BastionPrefix": "172.16.192.32/27",
+                  "DestinationPrefix": "172.16.194.0/24",
+                  "DeploymentType": "Default",
+                  "Network": {
+                    "ResourceGroupName": "EU2-RSG-MGMT",
+                    "SubnetName": "EU2-VNET01-RDSH-PRD",
+                    "VirtualNetworkName": "EU2-VNET01"
+                  },
+                  "SecurityRules": [
+                    {
+                      "name": "allow_vpn_rdp",
+                      "properties": {
+                        "access": "Allow",
+                        "description": "",
+                        "destinationAddressPrefix": "172.16.194.0/24",
+                        "destinationPortRange": "3389",
+                        "direction": "inbound",
+                        "priority": 300,
+                        "protocol": "Tcp",
+                        "sourceAddressPrefix": "172.24.16.0/22",
+                        "sourcePortRange": "*"
+                      }
+                    },
+                    {
+                      "name": "Allow_DMZ_to_RDSH_3389",
+                      "properties": {
+                        "access": "Allow",
+                        "description": "",
+                        "destinationAddressPrefix": "172.16.194.0/24",
+                        "destinationPortRange": "3389",
+                        "direction": "inbound",
+                        "priority": 301,
+                        "protocol": "Tcp",
+                        "sourceAddressPrefix": "172.16.193.0/24",
+                        "sourcePortRange": "*"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "EU2-VNET01-INS-PRD-NSG",
+                  "ResourceGroupName": "EU2-RSG-MGMT",
+                  "BastionPrefix": "172.16.192.32/27",
+                  "DestinationPrefix": "172.16.195.0/24",
+                  "DeploymentType": "Default",
+                  "Network": {
+                    "ResourceGroupName": "EU2-RSG-MGMT",
+                    "SubnetName": "EU2-VNET01-INS-PRD",
+                    "VirtualNetworkName": "EU2-VNET01"
+                  },
+                  "SecurityRules": [
+                    {
+                      "name": "allow_vpn_rdp",
+                      "properties": {
+                        "access": "Allow",
+                        "description": "",
+                        "destinationAddressPrefix": "172.16.195.0/24",
+                        "destinationPortRange": "3389",
+                        "direction": "inbound",
+                        "priority": 300,
+                        "protocol": "Tcp",
+                        "sourceAddressPrefix": "172.24.16.0/22",
+                        "sourcePortRange": "*"
+                      }
+                    },
+                    {
+                      "name": "Allow_RDSH_to_INS_445",
+                      "properties": {
+                        "access": "Allow",
+                        "description": "",
+                        "destinationAddressPrefix": "172.16.195.0/24",
+                        "destinationPortRange": "445",
+                        "direction": "inbound",
+                        "priority": 301,
+                        "protocol": "Tcp",
+                        "sourceAddressPrefix": "172.16.194.0/24",
+                        "sourcePortRange": "*"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "EU2-VNET02-SQLMI-PRD-NSG",
+                  "ResourceGroupName": "EU2-RSG-MGMT",
+                  "BastionPrefix": "172.16.192.32/27",
+                  "DestinationPrefix": "172.16.224.0/24",
+                  "DeploymentType": "SqlServer",
+                  "Network": {
+                    "ResourceGroupName": "EU2-RSG-MGMT",
+                    "SubnetName": "EU2-VNET02-SQLMI-PRD",
+                    "VirtualNetworkName": "EU2-VNET02"
+                  },
+                  "SecurityRules": [
+                  ]
+                }
+              ],
+              "virtualNetworkGateways": [
+                {
+                  "name": "EU2-VNET01-VPNGW",
+                  "ResourceGroupName": "EU2-RSG-MGMT",
+                  "gatewayType": "Vpn",
+                  "vpnType": "RouteBased",
+                  "privateIPAllocationMethod": "Dynamic",
+                  "sku": {
+                    "name": "VpnGw1",
+                    "tier": "VpnGw1"
+                  },
+                  "Network": {
+                    "ResourceGroupName": "EU2-RSG-MGMT",
+                    "SubnetName": "GatewaySubnet",
+                    "VirtualNetworkName": "EU2-VNET01"
+                  }
+                }
+              ],
+              "virtualNetworks": [
+                {
+                  "name": "EU2-VNET01",
+                  "ResourceGroupName": "EU2-RSG-MGMT",
+                  "addressSpace": [
+                    "172.16.192.0/19"
+                  ],
+                  "subnets": [
+                    {
+                      "name": "EU2-VNET01-AD-PRD",
+                      "properties": {
+                        "addressPrefix": "172.16.192.0/27"
+                      }
+                    },
+                    {
+                      "name": "EU2-VNET01-BAST-PRD",
+                      "properties": {
+                        "addressPrefix": "172.16.192.32/27"
+                      }
+                    },
+                    {
+                      "name": "GatewaySubnet",
+                      "properties": {
+                        "addressPrefix": "172.16.192.64/27"
+                      }
+                    },
+                    {
+                      "name": "EU2-VNET01-CBLS-PRD",
+                      "properties": {
+                        "addressPrefix": "172.16.192.96/27"
+                      }
+                    },
+                    {
+                      "name": "EU2-VNET01-UTIL-PRD",
+                      "properties": {
+                        "addressPrefix": "172.16.192.128/27"
+                      }
+                    },
+                    {
+                      "name": "EU2-VNET01-APP-PRD",
+                      "properties": {
+                        "addressPrefix": "172.16.192.160/27"
+                      }
+                    },
+                    {
+                      "name": "EU2-VNET01-DMZ-PRD",
+                      "properties": {
+                        "addressPrefix": "172.16.193.0/24"
+                      }
+                    },
+                    {
+                      "name": "EU2-VNET01-RDSH-PRD",
+                      "properties": {
+                        "addressPrefix": "172.16.194.0/24"
+                      }
+                    },
+                    {
+                      "name": "EU2-VNET01-INS-PRD",
+                      "properties": {
+                        "addressPrefix": "172.16.195.0/24"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "EU2-VNET02",
+                  "ResourceGroupName": "EU2-RSG-MGMT",
+                  "addressSpace": [
+                    "172.16.224.0/24"
+                  ],
+                  "subnets": [
+                    {
+                      "name": "EU2-VNET02-SQLMI-PRD",
+                      "properties": {
+                        "addressPrefix": "172.16.224.0/24"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            "Microsoft.OperationalInsights": {
+              "workspaces": [
+                {
+                  "name": "1038667-OMS",
+                  "Location": "East US",
+                  "ResourceGroupName": "EU2-RSG-MGMT",
+                  "Tier": "pergb2018"
+                }
+              ]
+            },
+            "Microsoft.RecoveryServices": {
+              "vaults": [
+                {
+                  "name": "EU2-PRD-RSV01",
+                  "ResourceGroupName": "EU2-RSG-MGMT",
+                  "policyName": "7D4W-VM-Policy",
+                  "dailyRetentionDurationCount": 7,
+                  "weeklyRetentionDurationCount": 4,
+                  "daysOfTheWeek": [
+                    "Sunday"
+                  ],
+                  "scheduleRunTimes": [
+                    "2019-08-17T05:00:00.000Z"
+                  ]
+                }
+              ]
+            },
+            "Microsoft.Storage": {
+              "storageAccounts": [
+                {
+                  "name": "1038667testfswit",
+                  "ResourceGroupName": "EU2-RSG-PRD",
+                  "kind": "StorageV2",
+                  "sku": "Standard_LRS"
+                },
+                {
+                  "name": "1038667testfs",
+                  "ResourceGroupName": "EU2-RSG-PRD",
+                  "kind": "StorageV2",
+                  "sku": "Standard_LRS"
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}
